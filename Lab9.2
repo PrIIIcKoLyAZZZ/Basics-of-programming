@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+void sNumbers(int n)
+{
+    for (int i = 2; i <= n; ++i) {
+        int f = 1;
+        for (int j = 2; j < i; ++j) {
+            if ((i % j) == 0) {
+                f = 0;
+                break;
+            }
+        }
+        if (f == 1)
+            printf("%d ", i);
+    }
+}
+
+void bankAccount(float money, float percent, float mounts)
+{
+    for (int i = 0; i <= mounts; ++i) {
+        money = money + (money * (percent / 12));
+        printf("%f\n", money);
+    }
+
+}
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    sNumbers(n);
+
+    float m, p, mo;
+
+    scanf("%f%f%f", &m, &p, &mo);
+
+    bankAccount(m, p, mo);
+
+    return 0;
+}
