@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+void Print(int i) {
+    printf("%d ", i);
+}
+
 void sNumbers(int n)
 {
     for (int i = 2; i <= n; ++i) {
@@ -11,7 +15,7 @@ void sNumbers(int n)
             }
         }
         if (f == 1)
-            printf("%d ", i);
+            Print(i);
     }
 }
 
@@ -19,7 +23,7 @@ void bankAccount(float money, float percent, float mounts)
 {
     for (int i = 0; i <= mounts; ++i) {
         money = money + (money * (percent / 12));
-        printf("%f\n", money);
+        Print(money);
     }
 
 }
