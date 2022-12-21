@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "struct.h"
+#include "function.c"
 
 int main()
 {
